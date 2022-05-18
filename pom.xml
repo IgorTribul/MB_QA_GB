@@ -8,6 +8,21 @@
     <artifactId>MB_QA_GB</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <profiles>
+        <profile>
+            <id>Android</id>
+            <properties>
+                <platform>Android</platform>
+            </properties>
+        </profile>
+        <profile>
+            <id>iOS</id>
+            <properties>
+                <platform>iOS</platform>
+            </properties>
+        </profile>
+    </profiles>
+
     <properties>
         <aspectj.version>1.9.7</aspectj.version>
         <maven.compiler.source>8</maven.compiler.source>
@@ -21,6 +36,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.20</version>
                 <configuration>
+                    <systemPropertyVariables>
+                        <platform>${platform}</platform>
+                    </systemPropertyVariables>
                     <argLine>
                         -javaagent:"${settings.localRepository}\org\aspectj\aspectjweaver\${aspectj.version}\aspectjweaver-${aspectj.version}.jar"
                     </argLine>

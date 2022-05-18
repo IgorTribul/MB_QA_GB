@@ -1,9 +1,10 @@
-package ru.gb.mobile_tests.locators;
+package ru.gb.mobile_tests.locators.android;
 
 import io.appium.java_client.MobileBy;
 import org.openqa.selenium.By;
+import ru.gb.mobile_tests.locators.interfaceces.SignUpPageLocators;
 
-public class SignUpPageLocators {
+public class AndroidSignUpPageLocators implements SignUpPageLocators {
     public static String ALERT_TEXT_POSITIVE = "You successfully signed up!";
     public static String ALERT_TEXT_NEGATIVE = "Some fields are not valid!";
 

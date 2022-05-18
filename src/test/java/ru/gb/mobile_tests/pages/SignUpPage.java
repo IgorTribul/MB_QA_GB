@@ -2,15 +2,16 @@ package ru.gb.mobile_tests.pages;
 
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
-import ru.gb.mobile_tests.locators.SignUpPageLocators;
+import ru.gb.mobile_tests.locators.LocatorService;
+import ru.gb.mobile_tests.locators.interfaceces.SignUpPageLocators;
 
 import static com.codeborne.selenide.Selenide.$;
-import static ru.gb.mobile_tests.locators.SignUpPageLocators.ALERT_TEXT_NEGATIVE;
-import static ru.gb.mobile_tests.locators.SignUpPageLocators.ALERT_TEXT_POSITIVE;
+import static ru.gb.mobile_tests.locators.android.AndroidSignUpPageLocators.ALERT_TEXT_NEGATIVE;
+import static ru.gb.mobile_tests.locators.android.AndroidSignUpPageLocators.ALERT_TEXT_POSITIVE;
 
 public class SignUpPage {
     public SignUpPageLocators locator(){
-        return new SignUpPageLocators();
+        return LocatorService.SIGN_UP_PAGE_LOCATORS;
     }
 
     @Step("Вводим валидный email")

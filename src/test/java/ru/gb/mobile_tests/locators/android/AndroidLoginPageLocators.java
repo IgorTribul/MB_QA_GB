@@ -1,9 +1,10 @@
-package ru.gb.mobile_tests.locators;
+package ru.gb.mobile_tests.locators.android;
 
 import io.appium.java_client.MobileBy;
 import org.openqa.selenium.By;
+import ru.gb.mobile_tests.locators.interfaceces.LoginPageLocators;
 
-public class LoginPageLocators {
+public class AndroidLoginPageLocators implements LoginPageLocators {
     public By loginButton(){
         return MobileBy.AccessibilityId("button-LOGIN");
     }
