@@ -10,7 +10,7 @@ public class MainPage {
     public MainPageLocators locator (){
         return new MainPageLocators();
     }
-    @Step("Кликаем по кнопке Login в меня на главном экране")
+    @Step("Кликаем по кнопке Login в меню на главном экране")
     public LoginPage clickMainMenuLoginButton(){
         $(locator().mainMenuLoginButton()).click();
         return new LoginPage();

@@ -19,7 +19,7 @@ public class CheckSignUpFormTests extends BaseTest {
                 .sendPasswordPositive()
                 .sendRepeatPasswordPositive()
                 .clickSignUpButton()
-                .checkAlertMessageTextPositive();
+                .checkAlertMessageTextPositive("You successfully signed up!");
     }
 
     @Test
@@ -32,6 +32,6 @@ public class CheckSignUpFormTests extends BaseTest {
                 .sendPasswordPositive()
                 .sendRepeatPasswordPositive()
                 .clickSignUpButton()
-                .checkAlertMessageTextNegative();
+                .checkAlertMessageTextNegative("Some fields are not valid!");
     }
 }

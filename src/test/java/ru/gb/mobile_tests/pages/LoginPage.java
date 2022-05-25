@@ -21,9 +21,9 @@ public class LoginPage {
         return new SignUpPage();
     }
     @Step("Проверяем текст ошибки")
-    public LoginPage checkLoginErrorText(){
+    public LoginPage checkLoginErrorText(String string){
         $(locator().loginErrorText())
-                .shouldHave(Condition.text("Please enter a valid email address"));
+                .shouldHave(Condition.text(string));
         return new LoginPage();
     }
 }

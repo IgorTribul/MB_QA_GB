@@ -14,6 +14,6 @@ public class CheckErrorTextTest extends BaseTest {
         openApp()
                 .clickMainMenuLoginButton()
                 .clickLoginButton()
-                .checkLoginErrorText();
+                .checkLoginErrorText("Please enter a valid email address");
     }
 }

@@ -39,13 +39,13 @@ public class SignUpPage {
         return new SignUpPage();
     }
     @Step("Проверяем текс сообщения об ошибке регистрации")
-    public void checkAlertMessageTextPositive(){
-        $(locator().alertMessage()).shouldHave(Condition.text(ALERT_TEXT_POSITIVE));
+    public void checkAlertMessageTextPositive(String string){
+        $(locator().alertMessage()).shouldHave(Condition.text(string));
 //        return new SignUpPage();
     }
     @Step("Проверяем текс сообщения об успешной регистрации")
-    public SignUpPage checkAlertMessageTextNegative(){
-        $(locator().alertMessage()).shouldHave(Condition.text(ALERT_TEXT_NEGATIVE));
+    public SignUpPage checkAlertMessageTextNegative(String string){
+        $(locator().alertMessage()).shouldHave(Condition.text(string));
         return new SignUpPage();
     }
 
